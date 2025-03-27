@@ -1,0 +1,32 @@
+# SPDX-License-Identifier: None
+#
+# Copyright (c) 2023 Merlyn Mind, Inc.
+#
+
+menu "Solo Dongle V2 Configuration"
+
+config FW_VER_STR
+	string "Firmware version string"
+	default "v0.0.0"
+	help
+	  Firmware version string.
+
+config USB_AUDIO
+	bool "Enable USB Audio."
+	default y
+
+config DECODE_AUDIO
+	bool "Decode SBC audio to PCM."
+	default y
+
+config DEBUG_BUILD
+	bool "Enable debug functionality."
+	default n
+
+endmenu
+
+menu "Zephyr Kernel"
+source "Kconfig.zephyr"
+endmenu
+
+rsource "src/imu/Kconfig"
