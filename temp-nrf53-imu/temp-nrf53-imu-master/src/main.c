@@ -18,6 +18,9 @@
 #include "imu/imu.h"
 
 #include <zephyr/logging/log.h>
+
+//This is my modification in main.c
+
 LOG_MODULE_REGISTER(app, LOG_LEVEL_DBG);
 
 static const struct gpio_dt_spec air_mouse_btn = GPIO_DT_SPEC_GET(DT_ALIAS(sw3), gpios);
